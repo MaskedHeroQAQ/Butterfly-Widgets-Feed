@@ -4,10 +4,22 @@ var WidgetMetadata = {
   description: "获取 JAVRate 推荐（Cloudflare 自动回退）",
   author: "Ti / MaskedHeroQAQ",
   site: "https://www.javrate.com/",
-  version: "1.5.0",
+  version: "1.6.0",
   requiredVersion: "0.0.2",
   detailCacheDuration: 60,
   modules: [
+    {
+      id: "javrate.site-search",
+      title: "站内搜索（点右侧箭头）",
+      description: "使用 JAVRate 自带搜索查找番号、标题或演员",
+      requiresWebView: true,
+      functionName: "searchJAVRateSite",
+      cacheDuration: 0,
+      params: [
+        { name: "keyword", title: "搜索词", type: "input" },
+        { name: "page", title: "页码", type: "page", value: "1" },
+      ],
+    },
     {
       id: "javrate.browse",
       title: "按分类浏览",
@@ -210,6 +222,10 @@ async function searchJAVRate(params) {
   return fetchJavrateItems(url);
 }
 
+async function searchJAVRateSite(params) {
+  return searchJAVRate(params || {});
+}
+
 function parseDuration(value) {
   var match = String(value || "").match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
   if (!match) return undefined;
@@ -291,6 +307,7 @@ if (typeof module !== "undefined") {
     WidgetMetadata: WidgetMetadata,
     getJAVRateContent: getJAVRateContent,
     searchJAVRate: searchJAVRate,
+    searchJAVRateSite: searchJAVRateSite,
     loadDetail: loadDetail,
     parseJavrateHtml: parseJavrateHtml,
     parseJavrateMarkdown: parseJavrateMarkdown,

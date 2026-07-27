@@ -2,13 +2,55 @@
 WidgetMetadata = {
     id: "Pornhub",
     title: "Pornhub",
-    version: "1.1.0",
+    version: "1.2.0",
     requiredVersion: "0.0.1",
     description: "在线观看Pornhub",
     author: "海带",
     site: "https://github.com/Madai-v/ForwardWidgets",
     detailCacheDuration: 1200,
     modules: [
+        {
+            id: "pornhub.site-search",
+            title: "🔍 站内搜索（点右侧箭头）",
+            description: "使用 Pornhub 自带搜索，可选择精准匹配、排序和页码",
+            functionName: "getSiteSearchResults",
+            cacheDuration: 0,
+            params: [
+                {
+                    name: "keyword",
+                    title: "搜索关键词",
+                    type: "input"
+                },
+                {
+                    name: "search_type",
+                    title: "精准搜索",
+                    type: "enumeration",
+                    value: "no",
+                    enumOptions: [
+                        { title: "关闭", value: "no" },
+                        { title: "开启", value: "yes" }
+                    ]
+                },
+                {
+                    name: "sort_by",
+                    title: "排序方式",
+                    type: "enumeration",
+                    value: "",
+                    enumOptions: [
+                        { title: "最相关", value: "" },
+                        { title: "最新发布", value: "new" },
+                        { title: "最多播放", value: "views" },
+                        { title: "最高评分", value: "rating" }
+                    ]
+                },
+                {
+                    name: "page",
+                    title: "页码",
+                    type: "page",
+                    value: "1"
+                }
+            ]
+        },
         {
             id: "favorites",
             title: "❤️ 我的最爱",
@@ -973,6 +1015,10 @@ async function getSearchResults(params) {
         console.error("[getSearchResults] 错误:", e);
         throw e;
     }
+}
+
+async function getSiteSearchResults(params) {
+    return getSearchResults(params || {});
 }
 
 // 搜索功能解析函数
@@ -1958,6 +2004,7 @@ if (typeof module !== "undefined" && module.exports) {
     module.exports = {
         metadata: WidgetMetadata,
         getSearchResults: getSearchResults,
+        getSiteSearchResults: getSiteSearchResults,
         getFavorites: getFavorites,
         getRecommendedVideos: getRecommendedVideos,
         getUserUploads: getUserUploads,

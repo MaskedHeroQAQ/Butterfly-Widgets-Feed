@@ -4,10 +4,34 @@ var WidgetMetadata = {
   description: "获取 Jable 视频（Cloudflare 自动回退）",
   author: "nibiru / MaskedHeroQAQ",
   site: "https://jable.tv",
-  version: "1.2.0",
+  version: "1.3.0",
   requiredVersion: "0.0.2",
   detailCacheDuration: 60,
   modules: [
+    {
+      id: "jable.site-search",
+      title: "站内搜索（点右侧箭头）",
+      description: "使用 Jable 自带搜索，可选择排序和页码",
+      requiresWebView: true,
+      functionName: "searchSite",
+      cacheDuration: 0,
+      params: [
+        { name: "keyword", title: "关键词", type: "input" },
+        {
+          name: "sort_by",
+          title: "排序",
+          type: "enumeration",
+          value: "post_date",
+          enumOptions: [
+            { title: "最近更新", value: "post_date" },
+            { title: "最多观看", value: "video_viewed" },
+            { title: "近期最佳", value: "post_date_and_popularity" },
+            { title: "最多收藏", value: "most_favourited" },
+          ],
+        },
+        { name: "page", title: "页码", type: "page", value: "1" },
+      ],
+    },
     {
       id: "jable.hot",
       title: "热门",
@@ -283,10 +307,14 @@ async function search(params) {
   var url = makeListUrl(
     path,
     params.sort_by || "post_date",
-    params.from || 1,
+    params.page || params.from || 1,
     JABLE_SEARCH_BLOCK
   );
   return fetchJableItems(url);
+}
+
+async function searchSite(params) {
+  return search(params || {});
 }
 
 async function loadDetail(link) {
@@ -316,6 +344,7 @@ if (typeof module !== "undefined") {
     WidgetMetadata: WidgetMetadata,
     loadPage: loadPage,
     search: search,
+    searchSite: searchSite,
     loadDetail: loadDetail,
     parseJableHtml: parseJableHtml,
     parseJableMarkdown: parseJableMarkdown,

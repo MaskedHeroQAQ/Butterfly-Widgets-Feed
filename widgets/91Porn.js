@@ -3,7 +3,7 @@ WidgetMetadata = {
   title: "91Porn",
   description: "获取 91Porn 分类、搜索与播放资源",
   author: "匿名 / MaskedHeroQAQ",
-  version: "0.11.0",
+  version: "0.12.0",
   requiredVersion: "0.0.2",
   site: "https://91porn.com",
   detailCacheDuration: 60,
@@ -16,6 +16,18 @@ WidgetMetadata = {
     },
   ],
   modules: [
+    {
+      id: "91porn.site-search",
+      title: "站内搜索（点右侧箭头）",
+      description: "使用 91Porn 自带搜索",
+      cacheDuration: 0,
+      requiresWebView: false,
+      functionName: "search91PornSite",
+      params: [
+        { name: "keyword", title: "关键词", type: "input" },
+        { name: "page", title: "页码", type: "page", value: "1" },
+      ],
+    },
     {
       id: "91porn.list",
       title: "91Porn 视频",
@@ -186,6 +198,10 @@ async function search91Porn(params) {
   return parse91Search(html, baseUrl);
 }
 
+async function search91PornSite(params) {
+  return search91Porn(params || {});
+}
+
 async function loadDetail(link) {
   var html = await request91(link, { referer: PORN91_BASE_URL + "/" });
   var $ = Widget.html.load(html);
@@ -231,6 +247,7 @@ if (typeof module !== "undefined") {
     WidgetMetadata: WidgetMetadata,
     get91pornList: get91pornList,
     search91Porn: search91Porn,
+    search91PornSite: search91PornSite,
     loadDetail: loadDetail,
     loadResource: loadResource,
     parse91List: parse91List,

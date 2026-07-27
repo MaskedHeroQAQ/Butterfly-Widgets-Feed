@@ -3,7 +3,7 @@ WidgetMetadata = {
   title: "XVideos",
   description: "获取 XVideos 最新视频、频道、明星与搜索结果",
   author: "匿名 / MaskedHeroQAQ",
-  version: "0.11.0",
+  version: "0.12.0",
   requiredVersion: "0.0.2",
   site: "https://www.xvideos.com",
   detailCacheDuration: 60,
@@ -23,6 +23,17 @@ WidgetMetadata = {
     },
   ],
   modules: [
+    {
+      id: "xvideos.site-search",
+      title: "站内搜索（点右侧箭头）",
+      description: "使用 XVideos 自带关键词搜索",
+      functionName: "searchXVideosSite",
+      cacheDuration: 0,
+      params: [
+        { name: "keyword", title: "关键词", type: "input" },
+        { name: "page", title: "页码", type: "page", value: "0" },
+      ],
+    },
     {
       id: "xvideos.new",
       title: "最新视频",
@@ -219,6 +230,10 @@ async function searchXVideos(params) {
   return parseXvideosCards(await requestXvideos(url, params));
 }
 
+async function searchXVideosSite(params) {
+  return searchXVideos(params || {});
+}
+
 async function getChannelList(params) {
   params = params || {};
   var channel = String(params.channel || "").trim();
@@ -295,6 +310,7 @@ if (typeof module !== "undefined") {
     WidgetMetadata: WidgetMetadata,
     getNewList: getNewList,
     searchXVideos: searchXVideos,
+    searchXVideosSite: searchXVideosSite,
     getChannelList: getChannelList,
     getPornstarsList: getPornstarsList,
     loadDetail: loadDetail,

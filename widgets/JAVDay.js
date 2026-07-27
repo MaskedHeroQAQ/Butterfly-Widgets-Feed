@@ -4,10 +4,22 @@ WidgetMetadata = {
   description: "获取 JAVDay 推荐、分类与搜索",
   author: "Ti / MaskedHeroQAQ",
   site: "https://javday.app",
-  version: "1.2.0",
+  version: "1.3.0",
   requiredVersion: "0.0.2",
   detailCacheDuration: 60,
   modules: [
+    {
+      id: "javday.site-search",
+      title: "站内搜索（点右侧箭头）",
+      description: "使用 JAVDay 自带搜索查找女优、番号或关键词",
+      requiresWebView: false,
+      functionName: "searchSite",
+      cacheDuration: 0,
+      params: [
+        { name: "keyword", title: "女优、番号或关键词", type: "input" },
+        { name: "page", title: "页码", type: "page", value: "1" },
+      ],
+    },
     {
       id: "javday.latest",
       title: "最新更新",
@@ -194,6 +206,10 @@ async function search(params) {
   return parseJavdayItems(await requestJavday(url));
 }
 
+async function searchSite(params) {
+  return search(params || {});
+}
+
 function extractVideoUrl($) {
   var direct =
     $("video#J_prismPlayer").attr("src") ||
@@ -245,6 +261,7 @@ if (typeof module !== "undefined") {
     WidgetMetadata: WidgetMetadata,
     loadPage: loadPage,
     search: search,
+    searchSite: searchSite,
     loadDetail: loadDetail,
     parseJavdayItems: parseJavdayItems,
     buildListUrl: buildListUrl,
