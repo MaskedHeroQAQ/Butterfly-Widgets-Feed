@@ -4,7 +4,7 @@ var WidgetMetadata = {
   description: "获取 JAVRate 推荐（Cloudflare 自动回退）",
   author: "Ti / MaskedHeroQAQ",
   site: "https://www.javrate.com/",
-  version: "1.4.0",
+  version: "1.5.0",
   requiredVersion: "0.0.2",
   detailCacheDuration: 60,
   modules: [
@@ -33,24 +33,12 @@ var WidgetMetadata = {
         { name: "page", title: "页码", type: "page", value: "1" },
       ],
     },
-    {
-      id: "javrate.search",
-      title: "搜索",
-      description: "按番号、标题或演员搜索 JAVRate",
-      requiresWebView: true,
-      functionName: "searchJAVRate",
-      cacheDuration: 900,
-      params: [
-        { name: "query", title: "搜索词", type: "input" },
-        { name: "page", title: "页码", type: "page", value: "1" },
-      ],
-    },
   ],
   search: {
     title: "搜索 JAVRate",
     functionName: "searchJAVRate",
     params: [
-      { name: "query", title: "搜索词", type: "input" },
+      { name: "keyword", title: "搜索词", type: "input" },
       { name: "page", title: "页码", type: "page", value: "1" },
     ],
   },
@@ -212,7 +200,7 @@ async function searchJAVRate(params) {
   params = params || {};
   var query = String(params.query || params.keyword || "").trim();
   var page = parseInt(params.page, 10) || 1;
-  if (!query) throw new Error("请输入搜索关键词");
+  if (!query) return [];
 
   var url =
     JAVRATE_BASE_URL +
