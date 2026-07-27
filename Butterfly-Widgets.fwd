@@ -6,11 +6,11 @@
     {
       "id": "jable",
       "title": "Jable",
-      "description": "获取 Jable 全站视频",
-      "requiredVersion": "0.0.1",
-      "version": "1.0.8",
-      "author": "nibiru",
-      "url": "https://raw.githubusercontent.com/Jard1n/ForwardWidgets/main/Scripts/jable.js"
+      "description": "获取 Jable 视频（Cloudflare 自动回退）",
+      "requiredVersion": "0.0.2",
+      "version": "1.1.0",
+      "author": "nibiru / MaskedHeroQAQ",
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/Jable.js"
     },
     {
       "id": "nsfw.91porn",
@@ -42,11 +42,11 @@
     {
       "id": "ti.bemarkt.javrate",
       "title": "JAVRate",
-      "description": "获取 JAVRate 推荐",
-      "requiredVersion": "0.0.1",
-      "version": "1.3.0",
-      "author": "Ti",
-      "url": "https://raw.githubusercontent.com/Jard1n/ForwardWidgets/main/Scripts/javrate.js"
+      "description": "获取 JAVRate 推荐（Cloudflare 自动回退）",
+      "requiredVersion": "0.0.2",
+      "version": "1.4.0",
+      "author": "Ti / MaskedHeroQAQ",
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/JAVRate.js"
     },
     {
       "id": "nsfw.xvideos",
