@@ -12,6 +12,6 @@ https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/Butt
 
 当前自托管修复：
 
+- Jable：直连优先，遇到 Cloudflare 验证时自动回退，并保留 WebView 详情解析。
+- JAVRate：修复搜索路由并增加 Cloudflare 自动回退。
 - Pornhub：统一为 Forward 的 `type: "url"` 和 `backdropPath` 数据模型。
-- VOD：默认使用已验证的 JSON API，并移除失效或不安全的预设源。
-- TV Live：恢复基础频道数据，补齐默认分类与背景色。

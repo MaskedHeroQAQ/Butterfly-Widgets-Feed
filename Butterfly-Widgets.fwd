@@ -58,42 +58,6 @@
       "url": "https://unpkg.com/@forward-widget/nsfw@0.10.2/dist/xvideos.js"
     },
     {
-      "id": "ti.bemarkt.vod.maccms",
-      "title": "VOD",
-      "description": "获取 VOD 影视数据",
-      "requiredVersion": "0.0.1",
-      "version": "1.1.1",
-      "author": "Ti",
-      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/vod.js"
-    },
-    {
-      "id": "ti.bemarkt.podcast",
-      "title": "Podcast",
-      "description": "获取 RSS 播客数据",
-      "requiredVersion": "0.0.1",
-      "version": "2.1.0",
-      "author": "Ti",
-      "url": "https://raw.githubusercontent.com/bemarkt/scripts/master/provider/Forward/widgets/podcast.js"
-    },
-    {
-      "id": "live",
-      "title": "直播(电视+网络)",
-      "description": "解析直播订阅链接",
-      "requiredVersion": "0.0.1",
-      "version": "1.0.10",
-      "author": "huangxd",
-      "url": "https://raw.githubusercontent.com/huangxd-/ForwardWidgets/main/widgets/live.js"
-    },
-    {
-      "id": "tv_live",
-      "title": "电视台",
-      "description": "获取热门电视直播频道",
-      "requiredVersion": "0.0.1",
-      "version": "1.1.6",
-      "author": "两块",
-      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/TvLive.js"
-    },
-    {
       "id": "missav",
       "title": "MissAV",
       "description": "获取 MissAV（missav.ws / missav.ai）推荐、搜索与播放资源",
