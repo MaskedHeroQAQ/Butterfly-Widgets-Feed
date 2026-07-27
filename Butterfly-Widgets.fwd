@@ -26,9 +26,9 @@
       "title": "Pornhub",
       "description": "在线观看 Pornhub",
       "requiredVersion": "0.0.1",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "author": "海带",
-      "url": "https://raw.githubusercontent.com/Jard1n/ForwardWidgets/main/Scripts/Pornhub.js"
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/Pornhub.js"
     },
     {
       "id": "ti.bemarkt.javday",
@@ -62,9 +62,9 @@
       "title": "VOD",
       "description": "获取 VOD 影视数据",
       "requiredVersion": "0.0.1",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": "Ti",
-      "url": "https://raw.githubusercontent.com/bemarkt/scripts/master/provider/Forward/widgets/vod.js"
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/vod.js"
     },
     {
       "id": "ti.bemarkt.podcast",
@@ -77,7 +77,7 @@
     },
     {
       "id": "live",
-      "title": "直播（电视+网络）",
+      "title": "直播(电视+网络)",
       "description": "解析直播订阅链接",
       "requiredVersion": "0.0.1",
       "version": "1.0.10",
@@ -89,9 +89,9 @@
       "title": "电视台",
       "description": "获取热门电视直播频道",
       "requiredVersion": "0.0.1",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "author": "两块",
-      "url": "https://raw.githubusercontent.com/202090/Forward/main/Widgets/TvLive.js"
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/TvLive.js"
     },
     {
       "id": "missav",
