@@ -4,34 +4,10 @@ var WidgetMetadata = {
   description: "获取 Jable 视频（Cloudflare 自动回退）",
   author: "nibiru / MaskedHeroQAQ",
   site: "https://jable.tv",
-  version: "1.1.0",
+  version: "1.2.0",
   requiredVersion: "0.0.2",
   detailCacheDuration: 60,
   modules: [
-    {
-      id: "jable.search",
-      title: "搜索",
-      description: "按关键词搜索 Jable",
-      requiresWebView: true,
-      functionName: "search",
-      cacheDuration: 900,
-      params: [
-        { name: "keyword", title: "关键词", type: "input" },
-        {
-          name: "sort_by",
-          title: "排序",
-          type: "enumeration",
-          value: "post_date",
-          enumOptions: [
-            { title: "最近更新", value: "post_date" },
-            { title: "最多观看", value: "video_viewed" },
-            { title: "近期最佳", value: "post_date_and_popularity" },
-            { title: "最多收藏", value: "most_favourited" },
-          ],
-        },
-        { name: "from", title: "页码", type: "page", value: "1" },
-      ],
-    },
     {
       id: "jable.hot",
       title: "热门",
@@ -137,7 +113,7 @@ var WidgetMetadata = {
     functionName: "search",
     params: [
       { name: "keyword", title: "关键词", type: "input" },
-      { name: "from", title: "页码", type: "page", value: "1" },
+      { name: "page", title: "页码", type: "page", value: "1" },
     ],
   },
 };
@@ -293,7 +269,7 @@ async function loadPage(params) {
   var url = makeListUrl(
     params.path || "/hot/",
     params.sort_by || "post_date",
-    params.from || 1,
+    params.page || 1,
     JABLE_LIST_BLOCK
   );
   return fetchJableItems(url);
@@ -302,7 +278,7 @@ async function loadPage(params) {
 async function search(params) {
   params = params || {};
   var keyword = String(params.keyword || "").trim();
-  if (!keyword) throw new Error("请输入搜索关键词");
+  if (!keyword) return [];
   var path = "/search/" + encodeURIComponent(keyword) + "/";
   var url = makeListUrl(
     path,

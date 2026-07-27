@@ -12,6 +12,9 @@ https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/Butt
 
 当前自托管修复：
 
-- Jable：直连优先，遇到 Cloudflare 验证时自动回退，并保留 WebView 详情解析。
-- JAVRate：修复搜索路由并增加 Cloudflare 自动回退。
-- Pornhub：统一为 Forward 的 `type: "url"` 和 `backdropPath` 数据模型。
+- Jable：标准顶层搜索，直连优先，遇到 Cloudflare 验证时自动回退。
+- 91Porn：新增关键词搜索，并保留分类浏览与播放资源解析。
+- Pornhub：迁移到标准顶层搜索，空参数不再污染首页。
+- JAVDay：修复失效的第一页搜索地址并改为自托管模块。
+- JAVRate：标准顶层搜索与 Cloudflare 自动回退。
+- XVideos：新增关键词搜索，并保留最新、频道与明星浏览。

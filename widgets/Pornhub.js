@@ -2,60 +2,13 @@
 WidgetMetadata = {
     id: "Pornhub",
     title: "Pornhub",
-    version: "1.0.6",
+    version: "1.1.0",
     requiredVersion: "0.0.1",
     description: "在线观看Pornhub",
     author: "海带",
     site: "https://github.com/Madai-v/ForwardWidgets",
     detailCacheDuration: 1200,
     modules: [
-        {
-            id: "searchKeyword",
-            title: "🔍 全站搜索",
-            functionName: "getSearchResults",
-            cacheDuration: 180,
-            params: [
-                {
-                    name: "search_query",
-                    title: "搜索关键词",
-                    type: "input",
-                    description: "请输入要搜索的关键词",
-                    value: ""
-                },
-                {
-                    name: "search_type",
-                    title: "是否开启精准搜索（作者名或视频标题 包含/等于 关键词）",
-                    type: "enumeration",
-                    description: "是否开启精准搜索",
-                    value: "",
-                    enumOptions: [
-                        { title: "关闭", value: "no" },
-                        { title: "开启", value: "yes" },
-
-                    ]
-                },
-                {
-                    name: "sort_by",
-                    title: "排序方式",
-                    type: "enumeration",
-                    description: "视频排序方式",
-                    value: "",
-                    enumOptions: [
-                        { title: "最相关", value: "" },
-                        { title: "最新发布", value: "new" },
-                        { title: "最多播放", value: "views" },
-                        { title: "最高评分", value: "rating" }
-                    ]
-                },
-                {
-                    name: "page",
-                    title: "页码",
-                    type: "page",
-                    description: "页码",
-                    value: "1"
-                }
-            ]
-        },
         {
             id: "favorites",
             title: "❤️ 我的最爱",
@@ -627,7 +580,46 @@ WidgetMetadata = {
             ]
         }
 
-    ]
+    ],
+    search: {
+        title: "搜索 Pornhub",
+        functionName: "getSearchResults",
+        params: [
+            {
+                name: "keyword",
+                title: "搜索关键词",
+                type: "input"
+            },
+            {
+                name: "search_type",
+                title: "精准搜索",
+                type: "enumeration",
+                value: "no",
+                enumOptions: [
+                    { title: "关闭", value: "no" },
+                    { title: "开启", value: "yes" }
+                ]
+            },
+            {
+                name: "sort_by",
+                title: "排序方式",
+                type: "enumeration",
+                value: "",
+                enumOptions: [
+                    { title: "最相关", value: "" },
+                    { title: "最新发布", value: "new" },
+                    { title: "最多播放", value: "views" },
+                    { title: "最高评分", value: "rating" }
+                ]
+            },
+            {
+                name: "page",
+                title: "页码",
+                type: "page",
+                value: "1"
+            }
+        ]
+    }
 };
 
 // 通用工具函数 - 减少代码冗余
@@ -934,7 +926,8 @@ function extractAuthor($, element) {
 
 // 搜索功能主函数
 async function getSearchResults(params) {
-    const searchQuery = params.search_query || '';
+    const searchQuery = params.keyword || params.search_query || '';
+    if (!searchQuery.trim()) return [];
     const page = Math.max(1, Number(params.page) || 1);  // 确保页码正确
     const sortBy = params.sort_by || "";
     const searchType = params.search_type || "no";  // 获取是否开启精准搜索的设置
@@ -1061,8 +1054,7 @@ function getFavorites(params) {
             console.log("开始获取收藏列表: " + JSON.stringify(params));
             // 参数验证
             if (!params.username) {
-                console.log("错误: 未提供用户名");
-                reject(new Error("请提供用户名"));
+                resolve([]);
                 return;
             }
 
@@ -1240,7 +1232,7 @@ async function getUserUploads(params = {}) {
         // 2. 搜索艺人模式：params.user_type是类型，params.username是用户输入的名称
         const userType = (params.user_type || "model").toLowerCase();
         const username = (params.username || "").trim();
-        if (!username) throw new Error("请输入艺人名称");
+        if (!username) return [];
         // 下面和优选一样，类型分流
         return await doFetch(userType, username, params);
     }

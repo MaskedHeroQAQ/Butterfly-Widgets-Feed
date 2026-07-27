@@ -8,7 +8,7 @@
       "title": "Jable",
       "description": "获取 Jable 视频（Cloudflare 自动回退）",
       "requiredVersion": "0.0.2",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": "nibiru / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/Jable.js"
     },
@@ -16,46 +16,47 @@
       "id": "nsfw.91porn",
       "title": "91Porn",
       "description": "获取 91Porn 视频",
-      "requiredVersion": "0.0.1",
-      "version": "0.10.2",
-      "author": "匿名",
-      "url": "https://unpkg.com/@forward-widget/nsfw@0.10.2/dist/91porn.js"
+      "description": "获取 91Porn 分类、搜索与播放资源",
+      "requiredVersion": "0.0.2",
+      "version": "0.11.0",
+      "author": "匿名 / MaskedHeroQAQ",
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/91Porn.js"
     },
     {
       "id": "Pornhub",
       "title": "Pornhub",
       "description": "在线观看 Pornhub",
       "requiredVersion": "0.0.1",
-      "version": "1.0.6",
+      "version": "1.1.0",
       "author": "海带",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/Pornhub.js"
     },
     {
       "id": "ti.bemarkt.javday",
       "title": "JAVDay",
-      "description": "获取 JAVDay 推荐",
+      "description": "获取 JAVDay 推荐、分类与搜索",
       "requiredVersion": "0.0.2",
-      "version": "1.1.0",
-      "author": "𝓑𝓾𝓽𝓽𝓮𝓻𝓯𝓵𝔂",
-      "url": "https://raw.githubusercontent.com/tpho2585-ctrl/FW-/main/%E7%91%9F%E7%91%9F/Javday.js"
+      "version": "1.2.0",
+      "author": "Ti / MaskedHeroQAQ",
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/JAVDay.js"
     },
     {
       "id": "ti.bemarkt.javrate",
       "title": "JAVRate",
       "description": "获取 JAVRate 推荐（Cloudflare 自动回退）",
       "requiredVersion": "0.0.2",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": "Ti / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/JAVRate.js"
     },
     {
       "id": "nsfw.xvideos",
       "title": "XVideos",
-      "description": "获取 XVideos 视频",
-      "requiredVersion": "0.0.1",
-      "version": "0.10.2",
-      "author": "匿名",
-      "url": "https://unpkg.com/@forward-widget/nsfw@0.10.2/dist/xvideos.js"
+      "description": "获取 XVideos 最新视频、频道、明星与搜索结果",
+      "requiredVersion": "0.0.2",
+      "version": "0.11.0",
+      "author": "匿名 / MaskedHeroQAQ",
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/XVideos.js"
     },
     {
       "id": "missav",
