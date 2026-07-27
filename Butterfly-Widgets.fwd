@@ -8,7 +8,7 @@
       "title": "Jable",
       "description": "获取 Jable 视频（Cloudflare 自动回退）",
       "requiredVersion": "0.0.2",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "author": "nibiru / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/Jable.js"
     },
@@ -18,7 +18,7 @@
       "description": "获取 91Porn 视频",
       "description": "获取 91Porn 分类、搜索与播放资源",
       "requiredVersion": "0.0.2",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "author": "匿名 / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/91Porn.js"
     },
@@ -27,7 +27,7 @@
       "title": "Pornhub",
       "description": "在线观看 Pornhub",
       "requiredVersion": "0.0.1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": "海带",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/Pornhub.js"
     },
@@ -36,7 +36,7 @@
       "title": "JAVDay",
       "description": "获取 JAVDay 推荐、分类与搜索",
       "requiredVersion": "0.0.2",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "author": "Ti / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/JAVDay.js"
     },
@@ -45,7 +45,7 @@
       "title": "JAVRate",
       "description": "获取 JAVRate 推荐（Cloudflare 自动回退）",
       "requiredVersion": "0.0.2",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "author": "Ti / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/JAVRate.js"
     },
@@ -54,18 +54,18 @@
       "title": "XVideos",
       "description": "获取 XVideos 最新视频、频道、明星与搜索结果",
       "requiredVersion": "0.0.2",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "author": "匿名 / MaskedHeroQAQ",
       "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/XVideos.js"
     },
     {
       "id": "missav",
       "title": "MissAV",
-      "description": "获取 MissAV（missav.ws / missav.ai）推荐、搜索与播放资源",
+      "description": "获取 MissAV（missav.ws / missav.ai）推荐、聚合搜索、站内搜索与播放资源",
       "requiredVersion": "0.0.2",
-      "version": "2.0.0",
-      "author": "flymec",
-      "url": "https://raw.githubusercontent.com/flymec/Capyplayer/main/Widgets/missav.js"
+      "version": "2.1.0",
+      "author": "flymec / MaskedHeroQAQ",
+      "url": "https://raw.githubusercontent.com/MaskedHeroQAQ/Butterfly-Widgets-Feed/main/widgets/MissAV.js"
     }
   ]
 }
