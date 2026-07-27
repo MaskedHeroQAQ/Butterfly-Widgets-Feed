@@ -1,0 +1,106 @@
+{
+  "title": "𝓑𝓾𝓽𝓽𝓮𝓻𝓯𝓵𝔂 ‘𝓼 𝓦𝓲𝓭𝓰𝓮𝓽𝓼（恢复版）",
+  "description": "根据 FWDHub 缓存的原 pack1r-18.fwd 清单恢复；失效地址已替换为当前可访问的上游或镜像。",
+  "icon": "https://assets.vvebo.vip/scripts/icon.png",
+  "widgets": [
+    {
+      "id": "jable",
+      "title": "Jable",
+      "description": "获取 Jable 全站视频",
+      "requiredVersion": "0.0.1",
+      "version": "1.0.8",
+      "author": "nibiru",
+      "url": "https://raw.githubusercontent.com/Jard1n/ForwardWidgets/main/Scripts/jable.js"
+    },
+    {
+      "id": "nsfw.91porn",
+      "title": "91Porn",
+      "description": "获取 91Porn 视频",
+      "requiredVersion": "0.0.1",
+      "version": "0.10.2",
+      "author": "匿名",
+      "url": "https://unpkg.com/@forward-widget/nsfw@0.10.2/dist/91porn.js"
+    },
+    {
+      "id": "Pornhub",
+      "title": "Pornhub",
+      "description": "在线观看 Pornhub",
+      "requiredVersion": "0.0.1",
+      "version": "1.0.5",
+      "author": "海带",
+      "url": "https://raw.githubusercontent.com/Jard1n/ForwardWidgets/main/Scripts/Pornhub.js"
+    },
+    {
+      "id": "ti.bemarkt.javday",
+      "title": "JAVDay",
+      "description": "获取 JAVDay 推荐",
+      "requiredVersion": "0.0.2",
+      "version": "1.1.0",
+      "author": "𝓑𝓾𝓽𝓽𝓮𝓻𝓯𝓵𝔂",
+      "url": "https://raw.githubusercontent.com/tpho2585-ctrl/FW-/main/%E7%91%9F%E7%91%9F/Javday.js"
+    },
+    {
+      "id": "ti.bemarkt.javrate",
+      "title": "JAVRate",
+      "description": "获取 JAVRate 推荐",
+      "requiredVersion": "0.0.1",
+      "version": "1.3.0",
+      "author": "Ti",
+      "url": "https://raw.githubusercontent.com/Jard1n/ForwardWidgets/main/Scripts/javrate.js"
+    },
+    {
+      "id": "nsfw.xvideos",
+      "title": "XVideos",
+      "description": "获取 XVideos 视频",
+      "requiredVersion": "0.0.1",
+      "version": "0.10.2",
+      "author": "匿名",
+      "url": "https://unpkg.com/@forward-widget/nsfw@0.10.2/dist/xvideos.js"
+    },
+    {
+      "id": "ti.bemarkt.vod.maccms",
+      "title": "VOD",
+      "description": "获取 VOD 影视数据",
+      "requiredVersion": "0.0.1",
+      "version": "1.1.0",
+      "author": "Ti",
+      "url": "https://raw.githubusercontent.com/bemarkt/scripts/master/provider/Forward/widgets/vod.js"
+    },
+    {
+      "id": "ti.bemarkt.podcast",
+      "title": "Podcast",
+      "description": "获取 RSS 播客数据",
+      "requiredVersion": "0.0.1",
+      "version": "2.1.0",
+      "author": "Ti",
+      "url": "https://raw.githubusercontent.com/bemarkt/scripts/master/provider/Forward/widgets/podcast.js"
+    },
+    {
+      "id": "live",
+      "title": "直播（电视+网络）",
+      "description": "解析直播订阅链接",
+      "requiredVersion": "0.0.1",
+      "version": "1.0.10",
+      "author": "huangxd",
+      "url": "https://raw.githubusercontent.com/huangxd-/ForwardWidgets/main/widgets/live.js"
+    },
+    {
+      "id": "tv_live",
+      "title": "电视台",
+      "description": "获取热门电视直播频道",
+      "requiredVersion": "0.0.1",
+      "version": "1.1.5",
+      "author": "两块",
+      "url": "https://raw.githubusercontent.com/202090/Forward/main/Widgets/TvLive.js"
+    },
+    {
+      "id": "missav",
+      "title": "MissAV",
+      "description": "获取 MissAV（missav.ws / missav.ai）推荐、搜索与播放资源",
+      "requiredVersion": "0.0.2",
+      "version": "2.0.0",
+      "author": "flymec",
+      "url": "https://raw.githubusercontent.com/flymec/Capyplayer/main/Widgets/missav.js"
+    }
+  ]
+}
