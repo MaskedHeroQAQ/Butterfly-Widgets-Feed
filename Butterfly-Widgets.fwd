@@ -15,7 +15,6 @@
     {
       "id": "nsfw.91porn",
       "title": "91Porn",
-      "description": "获取 91Porn 视频",
       "description": "获取 91Porn 分类、搜索与播放资源",
       "requiredVersion": "0.0.2",
       "version": "0.12.0",
